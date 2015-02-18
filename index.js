@@ -1,11 +1,22 @@
+/**
+ * Modules
+ */
 var esprima = require('esprima');
 var _ = require('lodash');
 
-
-
-
+/**
+ * Locals
+ */
 var nonLogicalNodes = ['Program', 'BlockStatement'];
 
+/**
+ * Exports
+ */
+module.exports = Analysis;
+
+/**
+ * Analysis
+ */
 function Analysis(code) {
 
   this.types = {};
@@ -13,8 +24,6 @@ function Analysis(code) {
 
   this.run();
 }
-
-module.exports = Analysis;
 
 Analysis.prototype.run = function() {
   var self = this;
@@ -26,7 +35,7 @@ Analysis.prototype.run = function() {
     if (type === 'VariableDeclaration')
       self.types[type] += node.declarations.length - 1;
   });
-}
+};
 
 Analysis.prototype.lloc = function() {
   var count = 0;
@@ -36,7 +45,7 @@ Analysis.prototype.lloc = function() {
     }
   });
   return count;
-}
+};
 
 function traverse(tree, nodeFn) {
   nodeFn(tree);
@@ -48,7 +57,7 @@ function traverse(tree, nodeFn) {
     traverse(tree.body, nodeFn);
   }
 
-}
+};
 
 
 
