@@ -45,10 +45,10 @@ a.lloc() // => 3
 
 MIT
 
-[travis-image]: https://img.shields.io/travis/joshrtay/js-analyse.svg?style=flat-square
-[travis-url]: https://travis-ci.org/joshrtay/js-analyse
-[git-image]: https://img.shields.io/github/tag/joshrtay/js-analyse.svg?style=flat-square
-[git-url]: https://github.com/joshrtay/js-analyse
+[travis-image]: https://img.shields.io/travis/joshrtay/jsAnalyse.svg?style=flat-square
+[travis-url]: https://travis-ci.org/joshrtay/jsAnalyse
+[git-image]: https://img.shields.io/github/tag/joshrtay/jsAnalyse.svg?style=flat-square
+[git-url]: https://github.com/joshrtay/jsAnalyse
 [standard-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [standard-url]: https://github.com/feross/standard
 [npm-image]: https://img.shields.io/npm/v/js-analyse.svg?style=flat-square
