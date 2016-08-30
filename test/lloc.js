@@ -1,10 +1,9 @@
 /**
  * Module dependencies
  */
-var fs = require('fs');
-var chai = require('chai');
-var expect = chai.expect;
 
+var fs = require('fs');
+var test = require('tape');
 
 /**
  * Analysis Lib
@@ -12,14 +11,9 @@ var expect = chai.expect;
 var Analysis = require('../');
 
 
-describe('Logical line count', function() {
-  var code;
-  before(function() {
-    code = fs.readFileSync('./test/files/code.js').toString('utf8');
-  })
-
-  it ('should count expressions, variable declartions function declarations and while statements', function() {
-    var a = new Analysis(code);
-    expect(a.lloc()).to.equal(9);
-  })
+test('Logical line count should count exporession, variable declarations, and while statments', function(t) {
+  var code = fs.readFileSync('./test/files/code.js').toString('utf8');
+  var a = new Analysis(code);
+  t.equal(a.lloc(), 9);
+  t.end();
 });
