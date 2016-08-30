@@ -48,8 +48,8 @@ Analysis.prototype.addExpression = function (name) {
   this.expressions[name]++
 }
 
-Analysis.prototype.getExpressionCount = function () {
-  return this.expressions
+Analysis.prototype.expressionCount = function (name) {
+  return this.expressions[name] || 0
 }
 
 Analysis.prototype.lloc = function () {

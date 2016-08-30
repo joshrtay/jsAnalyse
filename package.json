@@ -4,7 +4,8 @@
   "description": "Javascript analysis tool",
   "main": "index.js",
   "scripts": {
-    "test": "node test/*.js"
+    "test": "tape test/*.js",
+    "postversion": "git push && git push --tags && npm publish --access=public"
   },
   "keywords": [
     "javascript",
