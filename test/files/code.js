@@ -21,3 +21,13 @@ while (bool) {
   // LLOC 9
   i++
 }
+
+// LLOC 10
+loop(function () {
+  //LLOC 11
+  foo()
+  //LLOC 12
+  boo()
+  //LLOC 13
+  coo()
+})
